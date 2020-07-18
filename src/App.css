@@ -1,3 +1,7 @@
+body {
+  background-color: #fff;
+}
+
 .App {
   text-align: center;
 }
@@ -5,20 +9,236 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-top: 60px;
+  transition: all 1.5s;
+}
+
+.logo {
+  padding: 10px;
+  margin-right: 1150px;
+  margin-top: 10px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #1b1c1f;
+  height: 400px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  transition: all 1.5s;
+}
+
+.App-header:hover
+.App-logo {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.App-header:hover {
+  background-color: #282c34;
+}
+
+.horizontal-line {
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-color: #8298ab;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+.stripes-1 {
+  border-left: 6px solid #39c463;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -870px;
+  top: -9px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.stripes-2 {
+  border-left: 6px solid #39c463;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -810px;
+  top: -9px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.stripes-3 {
+  border-left: 6px solid #39c463;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -750px;
+  top: -9px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.stripes-4 {
+  border-left: 6px solid #39c463;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -685px;
+  top: -9px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.stripes-5 {
+  border-left: 6px solid #39c463;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  margin-left: -425px;
+  top: -9px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.stripes-6 {
+  border-left: 6px solid #39c463;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -540px;
+  top: -7px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.stripes-7 {
+  border-left: 6px solid #39c463;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  margin-left: -505px;
+  top: 70px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.stripes-8 {
+  border-left: 6px solid #39c463;
+  height: 290px;
+  position: absolute;
+  left: 50%;
+  margin-left: -470px;
+  top: 160px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: all 1.5s linear;
+}
+
+.App-header:hover
+.stripes-1 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(200px);
+}
+
+.App-header:hover
+.stripes-2 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(200px);
+}
+
+.App-header:hover
+.stripes-3 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(200px);
+}
+
+.App-header:hover
+.stripes-4 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(200px);
+}
+
+.App-header:hover
+.stripes-5 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(880px);
+}
+
+.App-header:hover
+.stripes-6 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(1060px);
+}
+
+.App-header:hover
+.stripes-7 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(1090px);
+}
+
+.App-header:hover
+.stripes-8 {
+  height: 390px;
+  top: 80px;
+  transform: translateX(1120px);
+}
+
+.visit {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 90px;
+  background-color: #fafafa;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
