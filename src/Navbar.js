@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logoTwo from './assets/techstars-logo.png';
 import Navbar from 'react-bootstrap/Navbar'
-import './App.css';
+import './App.scss';
 
 
 class Navigation extends Component {
@@ -26,9 +26,8 @@ class Navigation extends Component {
       <div>
       <Navbar bg={this.state.bg} sticky='top'>
       <Navbar.Brand href="#">
-        <div className="logo tooltip">
+        <div className="logo">
           <img src={logoTwo} width="140" height="30" alt="navbar logo"/>
-          <span class="tooltiptext">Home</span>
         </div>
       </Navbar.Brand>
       </Navbar>

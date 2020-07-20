@@ -1,40 +1,22 @@
 import React from 'react';
 import { validateForm, submitForm } from './helperFunctions';
-import logo from './assets/techstars-logo-white.svg';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+// calls the file Navbar.js that contains the code for the navbar
 import Navigation from './Navbar.js';
-import './App.css';
+// calls the file Header.js which contains the code for the interactive Header
+// under the Navbar
+import Signup from './Signup.js';
+import Header from './Header.js';
+import Event from './Event.js';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
     <Navigation />
-    <a href="https://www.techstars.com/" target='_blank' rel='noopener noreferrer'>
-      <header className="App-header">
-      <div className="stripes-1">
-      </div>
-      <div className="stripes-2">
-      </div>
-      <div className="stripes-3">
-      </div>
-      <div className="stripes-4">
-      </div>
-      <div className="stripes-5">
-      </div>
-      <div className="stripes-6">
-      </div>
-      <div className="stripes-7">
-      </div>
-      <div className="stripes-8">
-      </div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="visit">
-        Visit Our Website
-        </p>
-      </header>
-      </a>
-      <div className="horizontal-line">
-      </div>
+    <Header />
+    <Event />
+    <Signup />
     </div>
   );
 }
