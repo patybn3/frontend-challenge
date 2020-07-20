@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import logoTwo from './assets/techstars-logo.png';
+import Signup from './Signup.js';
 
 const Title = styled.h1`
   font-family: 'Helvetica Neue', 'sans serif';
@@ -34,6 +35,7 @@ const Side = styled.div`
   margin: 15px 5px;
   padding: 20px;
   text-align: center;
+  font-weight: 600;
 `
 
 const EventsList = styled.h3`
@@ -74,62 +76,62 @@ const Event = props => {
     <Logo>
     <img src={logoTwo} width="140" height="30" alt="navbar logo"/>
     </Logo>
-    <h3 onClick={() => setShowText(!showText)}>
-    <h3 onClick={() => setShowText2(false)}>
-    <h3 onClick={() => setShowText3(false)}>
-    <h3 onClick={() => setShowText4(false)}>
-    <h3 onClick={() => setShowText5(false)}>
+    <p onClick={() => setShowText(!showText)}>
+    <p onClick={() => setShowText2(false)}>
+    <p onClick={() => setShowText3(false)}>
+    <p onClick={() => setShowText4(false)}>
+    <p onClick={() => setShowText5(false)}>
     <EventsList>Event</EventsList>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
+    </p>
+    </p>
+    </p>
+    </p>
+    </p>
 
-    <h3 onClick={() => setShowText2(!showText2)}>
-    <h3 onClick={() => setShowText(false)}>
-    <h3 onClick={() => setShowText3(false)}>
-    <h3 onClick={() => setShowText4(false)}>
-    <h3 onClick={() => setShowText5(false)}>
+    <p onClick={() => setShowText2(!showText2)}>
+    <p onClick={() => setShowText(false)}>
+    <p onClick={() => setShowText3(false)}>
+    <p onClick={() => setShowText4(false)}>
+    <p onClick={() => setShowText5(false)}>
     <EventsList primary>Locations</EventsList>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    <h3 onClick={() => setShowText3(!showText3)}>
-    <h3 onClick={() => setShowText2(false)}>
-    <h3 onClick={() => setShowText(false)}>
-    <h3 onClick={() => setShowText4(false)}>
-    <h3 onClick={() => setShowText5(false)}>
+    </p>
+    </p>
+    </p>
+    </p>
+    </p>
+    <p onClick={() => setShowText3(!showText3)}>
+    <p onClick={() => setShowText2(false)}>
+    <p onClick={() => setShowText(false)}>
+    <p onClick={() => setShowText4(false)}>
+    <p onClick={() => setShowText5(false)}>
     <EventsList primary>Sign Up</EventsList>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    <h3 onClick={() => setShowText4(!showText4)}>
-    <h3 onClick={() => setShowText2(false)}>
-    <h3 onClick={() => setShowText3(false)}>
-    <h3 onClick={() => setShowText(false)}>
-    <h3 onClick={() => setShowText5(false)}>
+    </p>
+    </p>
+    </p>
+    </p>
+    </p>
+    <p onClick={() => setShowText4(!showText4)}>
+    <p onClick={() => setShowText2(false)}>
+    <p onClick={() => setShowText3(false)}>
+    <p onClick={() => setShowText(false)}>
+    <p onClick={() => setShowText5(false)}>
     <EventsList primary>Why You</EventsList>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    <h3 onClick={() => setShowText5(showText5)}>
-    <h3 onClick={() => setShowText2(false)}>
-    <h3 onClick={() => setShowText3(false)}>
-    <h3 onClick={() => setShowText4(false)}>
-    <h3 onClick={() => setShowText(false)}>
+    </p>
+    </p>
+    </p>
+    </p>
+    </p>
+    <p onClick={() => setShowText5(showText5)}>
+    <p onClick={() => setShowText2(false)}>
+    <p onClick={() => setShowText3(false)}>
+    <p onClick={() => setShowText4(false)}>
+    <p onClick={() => setShowText(false)}>
     <EventsList primary>Why Me</EventsList>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
-    </h3>
+    </p>
+    </p>
+    </p>
+    </p>
+    </p>
 
 
     </Side>
@@ -144,7 +146,10 @@ const Event = props => {
     {showText4 && <h6>This text ggrgwill show!</h6>}
 
     {showText5 && <h6>This teklhkxt grgwill show!</h6>}
+
+    <Signup />
     </EventDetails>
+
     </div>
   );
 }

@@ -1,52 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { validateForm, submitForm } from './helperFunctions';
+import React from 'react';
 import FormSubmit from './Form.js'
+import { useForm } from "react-hook-form";
 
-const Signup = props => {
-  const [values, setBody] = useState(
-    { firstName: '',
-      lastName: '',
-      email: '',
-      company: '',
-      role: ''
-    })
-  const [error, setError] = useState()
-  const [submitted, setSubmitted] = useState(false)
+const Signup = () => {
 
-  useEffect(() => {
-    setBody(values)
-  }, [values])
-
-  const handleChange = event => {
-    event.persist()
-    setBody(values => ({ ...values, [event.target.name] : event.target.value}))
+  const { register, handleSubmit, reset, errors } = useForm()
+  const onSubmit = (data, event) => {
+    event.target.reset()
+    console.log(JSON.stringify(data))
 
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setError({
-      error: validateForm(values)
-    }, () => {
-
-      if (Object.keys(error).length === 0 && submitted) {
-        submitForm(values).then(data => {
-          if (data.status === 200) {
-            setSubmitted(true)
-          }
-        })
-      }
-    })
+  const initialValue = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    role: ''
   }
 
   return (
     <div>
     <FormSubmit
-        values={values}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
+    register={register}
+    handleSubmit={handleSubmit}
+    errors={errors}
+    onSubmit={onSubmit}
+    reset={reset}
+    initialValue={initialValue}
+    />
     </div>
   )
 }
