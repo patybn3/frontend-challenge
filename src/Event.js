@@ -177,7 +177,7 @@ const Event = props => {
         training and support.
         </LinkShow>}
         {showText && <LinkShow> This webinar will teach you and your company all about
-        the latest technologies in the market to develop your product. You will have
+        the latest technologies on the market to develop your product. You will have
         the opportunity to learn the history of technology, its advantages and implementations
         on today's businesses.
         </LinkShow>}
@@ -194,8 +194,8 @@ const Event = props => {
             technology can also help facilitate political oppression and war via tools
             such as guns. As a cultural activity, technology predates both science and
             engineering, each of which formalize some aspects of technological
-            endeavor. At this point of this text I believe whoever is not really
-            into technology has lost interest on reading, and whoever is still reading
+            endeavor. At this point, I believe whoever is not really
+            into technology has lost interest on reading this, and whoever is still reading
             is one of us. So first of all, I would like to give credit to Wikipedia
             for letting me steal this great piece of text. With that said, the
             "Revolution" starts today at 12am. Have your computers ready and charged,
@@ -203,7 +203,7 @@ const Event = props => {
             will most certantly be weird for the unprepared. Welcome to 2020!</LinkShow>}
 
         {showText && <LinkShowTitle>Details</LinkShowTitle>}
-        {showText && <LinkShow>This event is free of charged. By signing up you
+        {showText && <LinkShow>This event is free of charge. By signing up you
           agree to be contacted by one of our representatives.
           By joining our network you will receive weekly information on our
           latest seminars and webinars as well as our products.
@@ -237,7 +237,7 @@ const Event = props => {
         </LinkShow>}
         {showText3 && <LinkShow> Innovation, creativity and an inspiring company culture,
           where you can collaborate, learn new technologies, perfect the ones you already
-          know, while making friends and working in a welcome and friendly environment is what
+          know, while making friends and working in a welcoming and friendly environment is what
           I have been looking for.
         </LinkShow>}
 
@@ -290,7 +290,8 @@ const Event = props => {
               won't be at the office so you won't have that expense.</LinkShowTitle>}
 
           {showText4 && <LinkShow>Actually, I take that back, because if I did have to go
-            to the office I would probably buy my coffee. Yes, I am a picky coffee
+            to the office I would probably buy my own coffee so you wouldn't have
+            that expense anyway (do you even offer coffee?). Yes, I am a picky coffee
             drinker, America runs on Dunkin.</LinkShow>}
 
             {showText4 && <LinkShowTitle>Here is a Recipe I Like:</LinkShowTitle>}
@@ -302,8 +303,8 @@ const Event = props => {
           you don't have but you can, if you want:
           </LinkShow>}
 
-          {showText4 && <LinkShow><p>Tapioca flour or tapioca starch<p>Eggs</p>
-            <p>Milk</p><p>Cheese (shocking)</p><p>Salt</p><p>and<strong> ME</strong></p></p></LinkShow>}
+          {showText4 && <LinkShow><p>Tapioca flour or tapioca starch</p><p>Eggs</p>
+            <p>Milk</p><p>Cheese (shocking)</p><p>Salt</p><p>and<strong> ME</strong></p></LinkShow>}
 
             {showText4 && <LinkShow>To be continued once hired...
               </LinkShow>}
@@ -316,7 +317,14 @@ const Event = props => {
               reasons I could list but I have common sense and I will stop here.</LinkShow>}
 
               {showText4 && <LinkShowTitle>Subscribe to my channel for more of me
-                (that means hire me, pretty much)</LinkShowTitle>}
+                </LinkShowTitle>}
+
+                {showText4 && <LinkShow>(that pretty much means hire me, I don't
+              actually have a channel)</LinkShow>}
+
+              {showText4 && <LinkShowTitle>Namaste
+                </LinkShowTitle>}
+
 
     {showText5 && <LinkShowTitle>Sign Up</LinkShowTitle>}
     {showText5 && <Signup />}
