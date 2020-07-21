@@ -6,6 +6,7 @@ import Navigation from './Navbar.js';
 // under the Navbar
 import Header from './Header.js';
 import Event from './Event.js';
+import Footer from './Footer.js';
 import './App.scss';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Navigation />
     <Header />
     <Event/>
+    <Footer />
     </div>
   );
 }

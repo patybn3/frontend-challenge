@@ -3,12 +3,11 @@ import FormSubmit from './Form.js'
 import { useForm } from "react-hook-form";
 
 const Signup = () => {
-
   const { register, handleSubmit, reset, errors } = useForm()
   const onSubmit = (data, event) => {
     event.target.reset()
+    alert(JSON.stringify("Success"))
     console.log(JSON.stringify(data))
-
   }
 
   const initialValue = {

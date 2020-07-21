@@ -1,10 +1,40 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react'
 import Form from 'react-bootstrap/Form'
-import { Button, Col, Row } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
+import styled from 'styled-components';
+
+const OutDiv = styled.div`
+  margin-top: 40px;
+  text-align: left;
+`
+
+const Error = styled.div`
+  font-size: 13px;
+  font-weight: 700;
+  color: red;
+`
+
+const ButtonS = styled.button`
+  text-align: center;
+  border-radius: 5px;
+  background: #39c463;
+  border: 2px solid #39c463;
+  color: #000;
+  padding: 5px 20px;
+  margin: 20px 0 70px;
+  justifyContent: "center";
+  alignItems: "center";
+  :hover {
+border: 2px solid #edb442;
+background: #edb442;
+cursor: pointer;
+}
+`
 
 function FormField({ initialValue, value, handleSubmit, onSubmit, reset, errors, register}) {
   return (
+    <OutDiv>
     <Form onSubmit={handleSubmit(onSubmit)}>
 
     <Form.Row>
@@ -21,7 +51,9 @@ function FormField({ initialValue, value, handleSubmit, onSubmit, reset, errors,
         required: true
       })}
       />
-      {errors.firstName && <p>This is required</p>}
+      <Error>
+      {errors.firstName && <p>Required Field</p>}
+      </Error>
       </Form.Group>
 
       <Form.Group as={Col}>
@@ -36,7 +68,9 @@ function FormField({ initialValue, value, handleSubmit, onSubmit, reset, errors,
         required: true
       })}
       />
-      {errors.lastName && <p>This is required</p>}
+      <Error>
+      {errors.lastName && <p>Required Field</p>}
+      </Error>
       </Form.Group>
 
       </Form.Row>
@@ -53,7 +87,9 @@ function FormField({ initialValue, value, handleSubmit, onSubmit, reset, errors,
         required: true
       })}
       />
-      {errors.email && <p>This is required</p>}
+      <Error>
+      {errors.email && <p>Required Field</p>}
+      </Error>
       </Form.Group>
 
       <Form.Group>
@@ -68,12 +104,15 @@ function FormField({ initialValue, value, handleSubmit, onSubmit, reset, errors,
         required: true
       })}
       />
-      {errors.company && <p>This is required</p>}
+      <Error>
+      {errors.company && <p>Required Field</p>}
+      </Error>
       </Form.Group>
 
       <Form.Group>
       <Form.Label>Role</Form.Label>
       <Form.Control as="select"
+      required
       defaultValue={initialValue.role}
       type="text"
       name="role"
@@ -88,13 +127,16 @@ function FormField({ initialValue, value, handleSubmit, onSubmit, reset, errors,
       <option>Mentor</option>
       <option>Founder</option>
       <option>Network Member</option>
+      <option>Other</option>
       </Form.Control>
-      {errors.role && <p>This is required</p>}
+      <Error>
+      {errors.role && <p>Required Field</p>}
+      </Error>
       </Form.Group>
 
-
-      <Button type="submit">Submit</Button>
+      <ButtonS type="submit">Submit</ButtonS>
     </Form>
+    </OutDiv>
   );
 }
 
